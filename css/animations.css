@@ -1,0 +1,73 @@
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes fadeUp {
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes glow{
+
+    0%{
+        box-shadow:0 0 15px rgba(212,175,55,.4);
+    }
+
+    50%{
+        box-shadow:0 0 40px rgba(212,175,55,.9);
+    }
+
+    100%{
+        box-shadow:0 0 15px rgba(212,175,55,.4);
+    }
+
+}
+
+@keyframes scrollDown{
+
+    0%{
+
+        opacity:1;
+
+        transform:translate(-50%,0);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translate(-50%,20px);
+
+    }
+
+}
+
+/* ================= SCROLL REVEAL ================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(70px);
+
+    transition:all .9s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
