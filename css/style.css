@@ -99,20 +99,16 @@ nav ul li a:hover::after{
 
 .hero{
     min-height:100vh;
-
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-
-    position:relative;
-
     text-align:center;
-
     padding:100px 20px 40px;
 
     background:
-    linear-gradient(rgba(11,17,32,.80),rgba(11,17,32,.85)),
-    url("../assets/images/background.jpg");
+        linear-gradient(rgba(11,17,32,.80),rgba(11,17,32,.85)),
+        url("../assets/images/background.jpg");
 
     background-size:cover;
     background-position:center;
@@ -1078,4 +1074,17 @@ nav ul li a.active{
 
     padding-bottom:5px;
 
+}
+
+/* ================= SCROLL REVEAL ================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(70px);
+    transition:all 1s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
 }
