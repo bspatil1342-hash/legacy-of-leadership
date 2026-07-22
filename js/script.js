@@ -198,3 +198,32 @@ window.addEventListener("scroll", ()=>{
     }
 
 });
+
+/*=========================
+   ACHIEVEMENT HOVER EFFECT
+=========================*/
+
+const achievementCards = document.querySelectorAll(".achievement-card");
+const achievementTitle = document.getElementById("achievement-title");
+const achievementText = document.getElementById("achievement-text");
+
+achievementCards.forEach(card => {
+
+    card.addEventListener("mouseenter", () => {
+
+        achievementTitle.style.opacity = "0";
+        achievementText.style.opacity = "0";
+
+        setTimeout(() => {
+
+            achievementTitle.textContent = card.dataset.title;
+            achievementText.textContent = card.dataset.text;
+
+            achievementTitle.style.opacity = "1";
+            achievementText.style.opacity = "1";
+
+        }, 150);
+
+    });
+
+});
