@@ -1088,3 +1088,148 @@ nav ul li a.active{
     opacity:1;
     transform:translateY(0);
 }
+
+/*==============================
+      MAJOR ACHIEVEMENTS
+==============================*/
+
+.achievements{
+    padding:90px 8%;
+    background:#111827;
+}
+
+.achievements .section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.achievements .section-title h2{
+    color:#d4af37;
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.achievements .section-title p{
+    color:#cfcfcf;
+}
+
+.achievement-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* Flip Card */
+
+.achievement-card{
+    height:260px;
+    perspective:1000px;
+}
+/*TODAY*/
+.card-inner{
+    width:100%;
+    height:100%;
+    position:relative;
+    transition:transform 0.8s ease;
+    transform-style:preserve-3d;
+}
+
+.achievement-card:hover .card-inner{
+    transform:rotateY(180deg);
+}
+
+.card-front,
+.card-back{
+
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    border-radius:18px;
+
+    backface-visibility:hidden;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:25px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(212,175,55,.35);
+
+    backdrop-filter:blur(12px);
+
+    transition:.3s;
+}
+
+.card-front{
+
+    box-shadow:0 0 20px rgba(212,175,55,.08);
+
+}
+
+.card-front:hover{
+
+    box-shadow:0 0 30px rgba(212,175,55,.35);
+
+}
+
+.card-icon{
+    font-size:60px;
+    margin-bottom:18px;
+}
+
+.card-front h3{
+
+    color:#fff;
+    font-size:1.35rem;
+
+}
+
+.card-back{
+
+    transform:rotateY(180deg);
+
+    text-align:center;
+
+}
+
+.card-back h3{
+
+    color:#d4af37;
+    margin-bottom:15px;
+
+}
+
+.card-back p{
+
+    color:#ddd;
+    line-height:1.7;
+    font-size:.95rem;
+
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    .achievement-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:650px){
+
+    .achievement-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
